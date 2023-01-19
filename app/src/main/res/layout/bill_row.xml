@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    android:padding="5dp"
+    android:layout_margin="8dp"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/backgroundColor"
+    android:id="@+id/billCard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/ivStore"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_outline_broken_image_24"/>
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/ivStore"
+            android:text="Store Name"
+            android:maxLines="1"
+            android:textColor="@color/seaBlue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="5dp"/>
+
+        <TextView
+            android:id="@+id/tvBillDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvStoreName"
+            android:layout_toEndOf="@id/ivStore"
+            android:text="Bill Date 01/01/2022 "
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:paddingStart="5dp"/>
+
+        <ImageView
+            android:id="@+id/icFavorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_favorite_border_24"
+            android:padding="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".View.AddBillActivity">
+
+    <LinearLayout
+        android:id="@+id/appBar_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:elevation="10dp"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icUserProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_outline_person_24" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/logos"/>
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/icNotification"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_outline_notifications_24" />
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/llHeader"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:elevation="10dp"-->
+<!--        android:background="@color/backgroundColor"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/appBar_navigation">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvAdd"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Add Bill"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textAlignment="textStart"-->
+<!--            android:textStyle="bold"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:textSize="18dp"/>-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/llMainAddBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.278"
+        app:layout_constraintTop_toBottomOf="@+id/appBar_navigation"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation">
+
+        <EditText
+            android:id="@+id/etStoreName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:focusable="true"
+            android:drawablePadding="5dp"
+            android:background="@drawable/border_card"
+            android:ems="10"
+            android:hint="Store Name"
+            android:textColorHint="@color/g1"
+            android:textSize="18dp"
+            android:padding="12dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etBillNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:focusable="true"
+            android:drawablePadding="5dp"
+            android:background="@drawable/border_card"
+            android:ems="10"
+            android:hint="Bill Number"
+            android:textColorHint="@color/g1"
+            android:textSize="18dp"
+            android:padding="12dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/llBillDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/tvBillDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:focusable="true"
+                android:drawablePadding="5dp"
+                android:background="@drawable/border_card"
+                android:ems="10"
+                android:hint="Bill Date"
+                android:textColorHint="@color/g1"
+                android:textSize="18dp"
+                android:padding="12dp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/ivCalender"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:focusable="true"
+                android:drawablePadding="5dp"
+                android:background="@drawable/ic_baseline_calendar_month_24"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="Bill Date"
+                android:textColorHint="@color/black"
+                android:textSize="18dp"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llWarrantyExp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/tvWarrantyExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:focusable="true"
+                android:drawablePadding="5dp"
+                android:background="@drawable/border_card"
+                android:ems="10"
+                android:hint="Warranty Expired"
+                android:textColorHint="@color/g1"
+                android:textSize="18dp"
+                android:padding="12dp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/ivCalenderWarranty"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"
+                android:focusable="true"
+                android:drawablePadding="5dp"
+                android:background="@drawable/ic_baseline_calendar_month_24"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="Warranty Expire"
+                android:textColorHint="@color/black"
+                android:textSize="18dp"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:focusable="true"
+            android:drawablePadding="5dp"
+            android:background="@drawable/border_card"
+            android:ems="10"
+            android:hint="Items"
+            android:textColorHint="@color/g1"
+            android:textSize="18dp"
+            android:padding="12dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etTotalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:focusable="true"
+            android:inputType="number"
+            android:drawablePadding="5dp"
+            android:background="@drawable/border_card"
+            android:ems="10"
+            android:hint="Total Amount"
+            android:textColorHint="@color/g1"
+            android:textSize="18dp"
+            android:padding="12dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etBillImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:focusable="true"
+            android:drawablePadding="5dp"
+            android:background="@drawable/border_card"
+            android:ems="10"
+            android:hint="Bill Image URL"
+            android:textColorHint="@color/g1"
+            android:textSize="18dp"
+            android:padding="12dp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_color"
+            android:layout_margin="20dp"
+            android:padding="12dp"
+            android:textColor="@color/backgroundColor"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+<!--    <Space-->
+<!--        android:id="@+id/space"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/llMainAddBill"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"/>-->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@color/color_bottom_icon"
+        app:itemTextColor="@color/color_bottom_icon"
+        app:menu="@menu/nav_menu"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

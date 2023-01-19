@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BillsBoxProject</string>
+    <string name="forgotten_password"><u>Forgot Password?</u></string>
+    <string name="sign_up"><u><b>SIGN UP</b></u></string>
+    <string name="sign_in"><u><b>SIGN IN</b></u></string>
+    <string name="see_all"><u><b>See All</b></u></string>
+</resources>
